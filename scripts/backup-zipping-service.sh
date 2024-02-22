@@ -2,8 +2,8 @@
 
 DIRECTORY_TO_ZIP="/root/minecraft-modded"
 backup_directory="/root/backups/"
-PERIOD=300 # период в секундах
-DELETE_FILES_OLDER_THAN_HOURS=24 # количество часов, после которых удалять файлы
+PERIOD=300 # period in seconds
+DELETE_FILES_OLDER_THAN_HOURS=24 # number of hours after which to delete files
 
 create_zip_with_timestamp() {
     TIMESTAMP=$(date -u +"%Y-%m-%dT%H%M%S")
@@ -15,13 +15,13 @@ delete_old_files() {
     find "${DIRECTORY_TO_ZIP}" -type f -mmin +$((DELETE_FILES_OLDER_THAN_HOURS * 60)) -exec rm {} \;
 }
 
-# Проверяем наличие каталога с файлами для архивации
+# Check if the directory to be zipped exists
 if [ ! -d "${DIRECTORY_TO_ZIP}" ]; then
-    echo "Ошибка: Каталог с файлами для архивации '${DIRECTORY_TO_ZIP}' не существует."
+    echo "Error: Directory to be zipped '${DIRECTORY_TO_ZIP}' does not exist."
     exit 1
 fi
 
-# Проверяем наличие каталога для резервных копий и создаем его при необходимости
+# Check if the backup directory exists and create it if necessary
 if [ ! -d "${backup_directory}" ]; then
     mkdir -p "${backup_directory}"
 fi
