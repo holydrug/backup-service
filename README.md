@@ -26,7 +26,7 @@ Fill in the variables in the script:
 2. LOG_FILE: Path to the log file where backup information is recorded.
 3. TOKEN: Authentication token for accessing Yandex.Disk.
 
-Получить токен можно тут [Yandex Rest API](https://yandex.ru/dev/disk/rest/)
+You can recieve token here [Yandex Rest API](https://yandex.ru/dev/disk/rest/)
 
 4. SERVERS_FOLDER: Folder containing server backups.
 5. DOMAIN_FOLDER: Path to the domain backup folder.
