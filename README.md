@@ -1,6 +1,8 @@
 ## Script for backing up files (or creating a backup of your virtual machine) to Yandex.Disk
 ### Example backup of a Minecraft server
 
+------------
+
 [backup-upload-service.sh](scripts%2Fbackup-upload-service.sh)
 
 This script archives the specified directory into the designated folder.
