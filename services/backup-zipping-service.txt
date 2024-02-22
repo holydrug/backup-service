@@ -1,0 +1,10 @@
+[Unit]
+Description=Backup Zipping Service
+After=network.target
+
+[Service]
+Type=simple
+ExecStart=/bin/bash /путь/к/вашему/backup-zipping-service.sh
+
+[Install]
+WantedBy=multi-user.target

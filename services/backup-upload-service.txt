@@ -1,0 +1,10 @@
+[Unit]
+Description=Backup Upload Service
+After=network.target
+
+[Service]
+Type=simple
+ExecStart=/bin/bash /путь/к/вашему/backup-upload-service.sh
+
+[Install]
+WantedBy=multi-user.target
