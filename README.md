@@ -33,3 +33,38 @@ Fill in the variables in the script:
 
 ### Note: Due to the limited upload speed of 128 kilobits per second on Yandex.Disk, it is necessary to split the files into smaller parts for efficient uploading.
 [Quotas and limits in API Gateway](https://cloud.yandex.com/en/docs/api-gateway/concepts/limits)
+
+------------
+
+Example of create daemon backup-upload-service:
+```shell
+sudo nano /etc/systemd/system/backup-upload-service.service
+```
+
+Edit service from file [backup-upload-service.txt](services%2Fbackup-upload-service.txt) and paste it in command below
+
+Example of start daemon backup-zipping-service:
+```shell
+sudo systemctl daemon-reload
+sudo systemctl start backup-upload-service.service
+sudo systemctl enable backup-upload-service.service
+```
+
+------------
+
+Example of create daemon backup-zipping-service:
+```shell
+sudo nano /etc/systemd/system/backup-zipping-service.service
+```
+
+Edit service from file [backup-zipping-service.txt](services%2Fbackup-zipping-service.txt) and paste it in command below
+
+Example of start daemon backup-zipping-service:
+```shell
+sudo systemctl daemon-reload
+sudo systemctl start backup-zipping-service.service
+sudo systemctl enable backup-zipping-service.service
+```
+
+
+
