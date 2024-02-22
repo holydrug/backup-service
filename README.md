@@ -1,6 +1,8 @@
 ## Script for backing up files (or creating a backup of your virtual machine) to Yandex.Disk
 ### Example backup of a Minecraft server
 
+------------
+
 [backup-upload-service.sh](scripts%2Fbackup-upload-service.sh)
 
 This script archives the specified directory into the designated folder.
@@ -24,12 +26,14 @@ Fill in the variables in the script:
 2. LOG_FILE: Path to the log file where backup information is recorded.
 3. TOKEN: Authentication token for accessing Yandex.Disk.
 
-Получить токен можно тут [Yandex Rest API](https://yandex.ru/dev/disk/rest/)
+You can recieve token here [Yandex Rest API](https://yandex.ru/dev/disk/rest/)
 
 4. SERVERS_FOLDER: Folder containing server backups.
 5. DOMAIN_FOLDER: Path to the domain backup folder.
 6. YANDEX_FOLDER: Path to the folder on Yandex.Disk where backups will be stored (ENTIRE PATH).
 7. SPLIT_SIZE: Size of parts into which the ZIP archive will be split before sending to Yandex.Disk.
+
+------------
 
 ### Note: Due to the limited upload speed of 128 kilobits per second on Yandex.Disk, it is necessary to split the files into smaller parts for efficient uploading.
 [Quotas and limits in API Gateway](https://cloud.yandex.com/en/docs/api-gateway/concepts/limits)
