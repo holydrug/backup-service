@@ -33,5 +33,7 @@ Fill in the variables in the script:
 6. YANDEX_FOLDER: Path to the folder on Yandex.Disk where backups will be stored (ENTIRE PATH).
 7. SPLIT_SIZE: Size of parts into which the ZIP archive will be split before sending to Yandex.Disk.
 
+------------
+
 ### Note: Due to the limited upload speed of 128 kilobits per second on Yandex.Disk, it is necessary to split the files into smaller parts for efficient uploading.
 [Quotas and limits in API Gateway](https://cloud.yandex.com/en/docs/api-gateway/concepts/limits)
